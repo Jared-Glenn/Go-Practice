@@ -1,0 +1,12 @@
+package main
+
+import "fmt"
+
+func ending(){
+fmt.Println("It's over now.")
+}
+
+func main(){
+defer ending()
+fmt.Println("It has only just begun.")
+}
