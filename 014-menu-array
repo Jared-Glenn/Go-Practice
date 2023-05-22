@@ -1,0 +1,16 @@
+package main
+import "fmt"
+
+func main() {
+  menu := [6]string{"Water", "Burger", "Cake", "Soup", "Soda", "Fries"}
+  
+  //your code goes here
+  var choice int
+  fmt.Scanln(&choice)
+  
+  if choice >= 0 && choice < 6 {
+      fmt.Println(menu[choice])
+  } else {
+      fmt.Println("Invalid choice")
+  }
+}
