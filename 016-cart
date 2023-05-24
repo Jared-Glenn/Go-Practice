@@ -1,0 +1,34 @@
+package main
+import "fmt"
+
+type Cart struct {
+    prices []float32
+}
+func (x Cart) show() {
+    var sum float32 = 0.0
+    for _, d := range x.prices {
+        sum = sum + d
+    }
+    //calculate the sum of all prices in the Cart
+    
+    fmt.Println(sum)
+}
+
+func main() {
+  c := Cart{}
+  var n int
+  var x float32
+  fmt.Scanln(&n)
+  
+  list := make([]float32,n)
+  
+  // take n inputs and add them to the Cart
+  for i := 0; i < n; i++ {
+      fmt.Scanln(&x)
+      list[i] = x
+  }
+  //call the show() method of the Cart
+  c.prices = list
+  c.show()
+  
+}
